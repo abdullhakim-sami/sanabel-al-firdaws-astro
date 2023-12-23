@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@astrojs/markdoc": "^0.8.1",
     "astro": "^4.0.7",
+    "open-props": "^1.6.16",
+    "postcss": "^8.4.32",
+    "postcss-jit-props": "^1.0.14",
     "typescript": "^5.3.3"
   }
 }
