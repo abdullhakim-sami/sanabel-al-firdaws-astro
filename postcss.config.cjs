@@ -7,7 +7,7 @@ module.exports = {
     postcssJitProps({
       files: [
         path.resolve(__dirname, 'node_modules/open-props/open-props.min.css'),
-        path.resolve(__dirname, 'node_modules/open-props/normalize.min.css'),
+
 
       ]
     }),
