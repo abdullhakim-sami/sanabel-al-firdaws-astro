@@ -1,0 +1,32 @@
+@import url(/node_modules/open-props/normalize.min.css);
+
+
+a {
+    color: var(--font-color); 
+    font-weight :bold;
+}
+a:hover {
+    /* text-decoration:dashed; */
+    text-decoration-color:var(--font-color);
+  }
+
+
+  :root {
+    --primary: var(--gray-8);
+    --c-primary:  var(--pink-6);
+    /* or any other variables/style */
+    background-color:var(--primary);
+    color: var(--font-color);
+  }
+  [data-theme='dark'] {
+    --primary:  var(--gray-8);;
+  }
+  [data-theme='pink'] {
+    --primary:  var(--pink-6);
+  }
+  [data-theme='custom'] {
+    --primary:  var(--c-primary);
+    --font-color: var(--c-font-color);
+  }
+  
+  

@@ -1,0 +1,39 @@
+---
+
+---
+<select id="choose-colors">
+    <option value="primary">
+      Primary Color
+    </option>
+    <option value="font">
+      Font Color
+    </option>
+  </select>
+<shop-color-picker  dir="ltr" mode="rgba" value="#FF55A7"><shop-color-picker>
+
+<script>
+    const picker = document.querySelector('shop-color-picker');
+    var r = document.querySelector(':root');
+    const choosecolors = document.getElementById('choose-colors');
+    var cssvar = "--c-font-color";
+
+ picker?.addEventListener('change', () => {
+   if (choosecolors.value == "primary") {
+ cssvar = '--c-primary'
+}else {
+ cssvar = '--c-font-color'
+};
+
+
+   console.log(`Color changed to ${picker.value}`);
+   r.style.setProperty(cssvar, picker.value);
+   localStorage.setItem(cssvar, picker.value);
+ });
+ </script>
+
+<style>
+
+shop-color-picker{
+    color: var(--c-font-color);background-color:var(--c-primary)
+}
+</style>

@@ -1,18 +1,15 @@
 ---
-const pagetitle = "الصفحة الرئيسية"
-import "../styles/global.css"
-import "../components/Navigation.astro"
-import Navigation from "../components/Navigation.astro";
+const pagetitle ="مدونة"
 import Footer from "../components/Footer.astro";
-import HeadLayout from "../layouts/HeadLayout.astro"
-import ThemeChange from "../components/ThemeChange.astro";
+import Navigation from "../components/Navigation.astro";
+import HeadLayout from "../layouts/HeadLayout.astro";
+import "../styles/global.css"
+
 ---
 
 <html lang="ar" dir="rtl">
 	<head>
-
-	<HeadLayout/>
-
+		<HeadLayout/>
 		<meta charset="utf-8" />
 		<link
 			rel="icon"
@@ -24,10 +21,9 @@ import ThemeChange from "../components/ThemeChange.astro";
 		<title>{pagetitle}</title>
 	</head>
 	<body>
-	<Navigation/>
-		<div>
-			<h1>{pagetitle}</h1>
-			<ThemeChange></ThemeChange>
+        <Navigation/>
+        <h1>{pagetitle}</h1>
+			
 		</div>
 		<Footer/>
 

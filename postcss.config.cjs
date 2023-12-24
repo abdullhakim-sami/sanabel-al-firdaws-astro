@@ -3,6 +3,11 @@ const postcssJitProps = require('postcss-jit-props');
 const path = require('path');
 
 module.exports = {
+  purge: {
+  options: {
+    safelist: [/data-theme$/],
+  },
+},
   plugins: [
     postcssJitProps({
       files: [
