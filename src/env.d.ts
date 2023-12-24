@@ -1,3 +1,3 @@
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
-/// <reference types="../node_modules/theme-change/index.d.ts" />
+/// <reference types="../node_modules/lucid-color-picker/lucid-color-picker.d.ts" />

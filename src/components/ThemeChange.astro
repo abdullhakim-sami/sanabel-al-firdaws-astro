@@ -1,42 +1,42 @@
 ---
-import ShopColorPicker from 'shop-color-picker'
+
 ---
-<select id="choose-colors">
+<select style="padding-left: 16px;" id="choose-colors">
     <option value="primary">
-      Primary Color
+      اللون الأساسي
     </option>
     <option value="font">
-      Font Color
+      لون الخط
     </option>
   </select>
-<shop-color-picker  dir="ltr" mode="rgba" value="#FF55A7"/>
+  <select data-choose-theme >
+    <option value="">المظهر الافتراضي</option>
+    <option value="dark">داكن</option>
+    <option value="light">فاتح</option>
+    <option value="custom">مخصص</option>
 
+  </select>
+<lucid-color-picker dir="ltr" mode="hsla"><lucid-color-picker>
 <script>
-    const picker = document.querySelector('shop-color-picker');
-    var r = document.querySelector(':root');
-    const choosecolors = document.getElementById('choose-colors');
+    import 'lucid-color-picker'
+    const picker = document.querySelector('lucid-color-picker') as HTMLInputElement | null;
+    var r = document.querySelector(':root') as HTMLInputElement | null;
+    const choosecolors = document.getElementById('choose-colors') as HTMLInputElement | null;
     var cssvar = "--c-font-color";
 
  picker?.addEventListener('change', () => {
-     // @ts-ignore 
+   
    if (choosecolors?.value == "primary") {
  cssvar = '--c-primary'
 }else {
  cssvar = '--c-font-color'
 };
 
- // @ts-ignore 
-   console.log(`Color changed to ${picker.value}`); 
-   // @ts-ignore 
-   r.style.setProperty(cssvar, picker.value);
-    // @ts-ignore 
+
+  //  console.log(`Color changed to ${picker.value}`); 
+
+   r?.style.setProperty(cssvar, picker.value);
+
    localStorage.setItem(cssvar, picker.value);
  });
  </script>
-
-<style>
-
-shop-color-picker{
-    color: var(--c-font-color);background-color:var(--c-primary)
-}
-</style>

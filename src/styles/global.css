@@ -13,16 +13,26 @@ a:hover {
 
   :root {
     --primary: var(--gray-8);
-    --c-primary:  var(--pink-6);
+    --font-color:  var(--gray-3);
     /* or any other variables/style */
     background-color:var(--primary);
     color: var(--font-color);
+    
+  }
+  select{
+    
+    color: var(--font-color);
+    background: var(--primary);
+    border: 2px dotted var(--font-color);
+    font-weight: bolder;
   }
   [data-theme='dark'] {
     --primary:  var(--gray-8);;
+    --font-color: var(--gray-4);
   }
-  [data-theme='pink'] {
-    --primary:  var(--pink-6);
+  [data-theme='light'] {
+    --primary:  var(--cyan-2);
+    --font-color: var(--cyan-11);
   }
   [data-theme='custom'] {
     --primary:  var(--c-primary);
