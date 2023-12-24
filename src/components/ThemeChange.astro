@@ -1,5 +1,5 @@
 ---
-
+import ShopColorPicker from 'shop-color-picker'
 ---
 <select id="choose-colors">
     <option value="primary">
@@ -9,7 +9,7 @@
       Font Color
     </option>
   </select>
-<shop-color-picker  dir="ltr" mode="rgba" value="#FF55A7"><shop-color-picker>
+<shop-color-picker  dir="ltr" mode="rgba" value="#FF55A7"/>
 
 <script>
     const picker = document.querySelector('shop-color-picker');
@@ -18,15 +18,18 @@
     var cssvar = "--c-font-color";
 
  picker?.addEventListener('change', () => {
-   if (choosecolors.value == "primary") {
+     // @ts-ignore 
+   if (choosecolors?.value == "primary") {
  cssvar = '--c-primary'
 }else {
  cssvar = '--c-font-color'
 };
 
-
-   console.log(`Color changed to ${picker.value}`);
+ // @ts-ignore 
+   console.log(`Color changed to ${picker.value}`); 
+   // @ts-ignore 
    r.style.setProperty(cssvar, picker.value);
+    // @ts-ignore 
    localStorage.setItem(cssvar, picker.value);
  });
  </script>

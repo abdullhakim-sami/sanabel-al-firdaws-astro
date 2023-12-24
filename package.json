@@ -16,6 +16,7 @@
     "open-props": "^1.6.16",
     "postcss": "^8.4.32",
     "postcss-jit-props": "^1.0.14",
+    "shop-color-picker": "^0.2.3",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
